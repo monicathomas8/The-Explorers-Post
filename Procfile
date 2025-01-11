@@ -1,1 +1,1 @@
-web: gunicorn explorers_post.wsgi
+web: gunicorn explorers_posts.wsgi
