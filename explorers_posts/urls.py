@@ -16,9 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from core.views import my_look
+
 
 urlpatterns = [
-    path('', my_look, name='look'),
     path('admin/', admin.site.urls),
+    path('', include('core.urls')),  # Routes the root URL to the core app
 ]
