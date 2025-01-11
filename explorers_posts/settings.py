@@ -27,6 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-monicathoma-theexplorer-9km8v8dopdg.ws.codeinstitute-ide.net',
+    '.herokuapp.com',
 ]
 
 
