@@ -10,14 +10,13 @@
     <ul>
         {% for story in stories %}
             <li>
-                <h2>{{ story.title }}</h2>
-                <p>By: {{ story.author }}</p>
+                <h2><a href="{% url 'story_detail' slug=story.slug %}">{{ story.title }}</a></h2>
                 <p>{{ story.content|truncatewords:30 }}</p>
-                
             </li>
         {% empty %}
-            <p>No stories available yet. Check back later!</p>
+            <p>No stories available yet.</p>
         {% endfor %}
     </ul>
+    
 </body>
 </html>
