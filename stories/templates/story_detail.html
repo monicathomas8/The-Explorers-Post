@@ -1,15 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ story.title }}</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Welcome to The Explorer's Post{% endblock %}
+
+{% block content %}
     <h1>{{ story.title }}</h1>
     <p>By: {{ story.author }}</p>
     <p>{{ story.content }}</p>
     <p>Published on: {{ story.created_on }}</p>
     <a href="{% url 'story_list' %}">Back to Stories</a>
-</body>
-</html>
+{%endblock%}
