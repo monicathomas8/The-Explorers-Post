@@ -3,8 +3,28 @@
 {% block title %}Welcome to The Explorer's Post{% endblock %}
 
 {% block content %}
-<h1>Welcome to The Explorer's Post</h1>
-<p>Explore ancient wonders and iconic destinations, or share your travel stories!</p>
-<a href="{% url 'story_list' %}">Explore Stories</a>
-<a href="#">Share Your Story</a>
+
+<div class="landing-page">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/static/images/colosseum.jpg" class="d-block w-100" alt="photo of the colosseum">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/images/northenlights.jpg" class="d-block w-100" alt="photo of northen lights">
+            </div>
+            <div class="carousel-item">
+                <img src="/static/images/pyramids.jpg" class="d-block w-100" alt="photo of the pyramids">
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>Welcome to The Explorer's Post</h1>
+        <p>Explore the world's most iconic destinations!</p>
+        <a href="{% url 'story_list' %}" class="btn btn-primary">Explore Stories</a>
+        <a href="#" class="btn btn-primary">Share Your Story</a>
+    </div>
+</div>
+
 {% endblock %}
