@@ -21,4 +21,6 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),  # Routes the root URL to the core app
+    path('stories/', include('stories.urls')),  # Routes to Stories app URLs
+    
 ]

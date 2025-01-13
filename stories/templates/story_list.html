@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Stories</title>
+</head>
+<body>
+    <h1>Explore Stories</h1>
+    <ul>
+        {% for story in stories %}
+            <li>
+                <h2>{{ story.title }}</h2>
+                <p>By: {{ story.author }}</p>
+                <p>{{ story.content|truncatewords:30 }}</p>
+                
+            </li>
+        {% empty %}
+            <p>No stories available yet. Check back later!</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>

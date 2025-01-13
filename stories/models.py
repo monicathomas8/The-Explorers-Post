@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
 
 
 # Create your models here.
@@ -17,6 +18,9 @@ class Story(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
+
+    def get_absolute_url(self):
+        return reverse('story_detail', kwargs={'slug': self.slug})
 
     def __str__(self):
         return self.title
