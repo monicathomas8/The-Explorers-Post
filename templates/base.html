@@ -35,7 +35,7 @@
                     <div class="navbar-nav">
                         <a class="nav-link" aria-current="page" href="{% url 'landing_page' %}">Home</a>
                         <a class="nav-link" href="{% url 'story_list' %}">Explore Stories</a>
-                        <a class="nav-link" href="#">Share Your Story</a>
+                        <a class="nav-link" href="{% url 'create_story' %}">Share Your Story</a>
 
                         {% if user.is_authenticated %}
                         <li class="nav-item">

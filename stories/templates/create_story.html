@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome to The Explorer's Post{% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div id="create-story-container">
+    <div class="form-card">
+        <h1>Create a New Story</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }} <!-- Crispy Forms handles form styling -->
+            <button type="submit" class="btn custom-btn">Submit Story</button>
+        </form>
+    </div>
+</div>
+
+{%endblock%}

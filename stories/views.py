@@ -1,5 +1,6 @@
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from .models import Story
+from .forms import StoryForm
 
 # Create your views here.
 
@@ -10,3 +11,17 @@ def story_list(request):
 def story_detail(request, slug):
     story = get_object_or_404(Story, slug=slug)
     return render(request, 'story_detail.html', {'story': story})
+
+def create_story(request):
+    if request.method == "POST":
+        form = StoryForm(request.POST)
+        if form.is_valid():
+            story = form.save(commit=False)
+            story.author = request.user  # Set the current logged-in user as the author
+            story.status = 0  # Default to "Draft" or adjust as needed
+            story.save()
+            return redirect('story_list')  # Redirect to the list of stories
+    else:
+        form = StoryForm()
+
+    return render(request, 'create_story.html', {'form': form})

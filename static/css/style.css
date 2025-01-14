@@ -119,8 +119,6 @@ body, html {
     padding: 20px;
     text-align: center;
     width: calc(100% - 40px); /* Full width minus padding */
-
-
 }
 
 .story-card h1 {
@@ -236,6 +234,8 @@ body, html {
     text-align: center; /* Center-align text */
     
 }
+
+
 
 /* Form styling */
 form.login {
