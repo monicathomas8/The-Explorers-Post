@@ -3,15 +3,23 @@
 {% block title %}Welcome to The Explorer's Post{% endblock %}
 
 {% block content %}
-    <h1>Explore Stories</h1>
-    <ul>
+<h1>Explore Stories</h1>
+<div class="container my-4">
+    <div class="row">
         {% for story in stories %}
-            <li>
-                <h2><a href="{% url 'story_detail' slug=story.slug %}">{{ story.title }}</a></h2>
-                <p>{{ story.content|truncatewords:30 }}</p>
-            </li>
-        {% empty %}
-            <p>No stories available yet.</p>
+        <div class="col-md-4">
+            <div class="card mb-4 custom-card">
+                <div class="card-body">
+                    <h5 class="card-title">{{ story.title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">By {{ story.author }}</h6>
+                    <p class="card-text">{{ story.content|truncatewords:20 }}</p>
+                    <a href="{% url 'story_detail' story.slug %}" class="btn custom-btn">Read More</a>
+                </div>
+            </div>
+        </div>
         {% endfor %}
-    </ul>
-    {% endblock %}
+    </div>
+</div>
+
+
+{% endblock %}

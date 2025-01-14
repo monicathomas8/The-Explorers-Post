@@ -3,12 +3,11 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Prevent scrolling */
 }
 
-
+/* need to fix this so content can be seen!!*/ 
 .navbar {
-    position: fixed;
+    
     top: 0;
     left: 0;
     width: 100%;
@@ -62,6 +61,51 @@ body, html {
 
 .btn {
     margin: 10px;
+}
+
+/* Customize the card */
+.custom-card {
+    background-color: #f8f9fa; /* Light grey background */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.custom-card .card-title {
+    font-size: 1.5rem;
+    color: #333; /* Dark grey for title */
+    margin-bottom: 10px;
+}
+
+.custom-card .card-subtitle {
+    font-size: 0.9rem;
+    color: #666; /* Muted grey for subtitle */
+}
+
+.custom-card .card-text {
+    font-size: 1rem;
+    color: #555; /* Medium grey for content */
+}
+
+/* Customize the button */
+.custom-btn {
+    background-color: #333;
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded button */
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.custom-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #fff;
+}
+
+/* Add space between rows */
+.card {
+    margin-bottom: 20px;
 }
 
 
