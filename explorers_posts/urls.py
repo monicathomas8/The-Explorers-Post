@@ -20,8 +20,9 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("accounts/", include("allauth.urls")),
     path('', include('core.urls')),  # Routes the root URL to the core app
     path('stories/', include('stories.urls')),  # Routes to Stories app URLs
-    path('summernote/', include('django_summernote.urls')) #Route to include summernote
+    path('summernote/', include('django_summernote.urls')), #Route to include summernote
     
 ]
