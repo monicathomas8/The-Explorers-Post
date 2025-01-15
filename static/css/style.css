@@ -112,7 +112,7 @@ body, html {
 }
 
 .custom-card {
-    background-color: #f8f9fa; /* Light grey background */
+    background-color: #f8f9fa7f; /* Light grey background */
     border: 1px solid #ddd; /* Subtle border */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
@@ -131,12 +131,12 @@ body, html {
 
 .custom-card .card-text {
     font-size: 1rem;
-    color: #555; /* Medium grey for content */
+    color: #0a0a0a; /* Medium grey for content */
     text-shadow: none; /* Remove text shadow */
 }
 
 .card {
-    margin-bottom: 30px; /* Add space between rows */
+    margin: 50px;
 }
 
 /*********************** STORY DETAIL PAGE *********************/
@@ -166,13 +166,14 @@ body, html {
 .story-card {
     position: relative;
     z-index: 2;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.596);
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
-    width: calc(100% - 40px); /* Full width minus padding */
+    width: 70%;
+    margin: 40px;
 }
 
 .story-card h1 {
@@ -189,7 +190,7 @@ body, html {
 
 .story-card .story-content {
     font-size: 1.2rem;
-    color: #555;
+    color: black;
     margin-bottom: 20px;
     text-align: left;
     text-shadow: none; /* Remove text shadow */
@@ -235,12 +236,8 @@ body, html {
     
 }
 
-
-/*********************** FORMS *********************/
-
 form.login {
     margin-top: 20px;
-    
 }
 
 form.login .primaryAction {
@@ -268,6 +265,44 @@ form.login .secondaryAction {
 form.login .secondaryAction:hover {
     text-decoration: underline;
 }
+
+/*********************** CREATE STORY PAGE *********************/
+
+#create-story-container {
+    background-image: url('/static/images/parthenon.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow-y: auto; /* Allow vertical scrolling */
+}
+
+#create-story-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1;
+}
+
+.form-card {
+    position: relative;
+    z-index: 2;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px; /* Adjust card width */
+}
+
 
 /*********************** FOOTER *********************/
 
