@@ -1,3 +1,6 @@
+
+/********** All PAGES **********/
+
 /* Make the body and html span the full viewport */
 body, html {
     margin: 0;
@@ -17,14 +20,50 @@ body, html {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
 
-/* Set up the landing page container */
+.content {
+    position: relative; /* Keep content above the carousel */
+    z-index: 2; /* Ensure content appears above the carousel */
+    color: white; /* Ensure text is visible */
+    text-align: center; /* Center text horizontally */
+    top: 60%; /* Position content closer to the top of the page */
+    transform: translateY(-10%); /* Fine-tune the vertical placement */
+}
+
+.content h1, .content p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a subtle shadow for readability */
+    position: relative;
+    z-index: 2; /* Ensure content appears above the carousel */
+    color: white; /* Contrast text color for readability */
+    text-align: center;
+}
+
+.btn {
+    margin: 10px;
+}
+
+.custom-btn {
+    background-color: #333;
+    color: #fff; /* White text */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded button */
+    padding: 8px 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.custom-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #fff;
+}
+
+/************************ LANDING PAGE  *****************************/
+
 .landing-page {
     position: relative;
     height: 100vh; /* Full viewport height */
     overflow: hidden;
 }
 
-/* Style the carousel as a full-page background */
 .carousel {
     position: fixed; /* Make the carousel stay in the background */
     top: 0;
@@ -41,29 +80,37 @@ body, html {
     object-fit: cover; /* Ensures the image scales to fill the area without distortion */
 }
 
-/* Style the content overlay */
-.content {
-    position: relative; /* Keep content above the carousel */
-    z-index: 2; /* Ensure content appears above the carousel */
-    color: white; /* Ensure text is visible */
-    text-align: center; /* Center text horizontally */
-    top: 50%; /* Position content closer to the top of the page */
-    transform: translateY(-10%); /* Fine-tune the vertical placement */
-}
+/************************ STORY LIST PAGE ******************/
 
-.content h1, .content p {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a subtle shadow for readability */
+#story-list-container {
+    background-image: url('/static/images/empire.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    padding : 50px;
+    border-radius: 8px; /* Optional: Add rounded corners */
+    color: white; /* Text color for readability */
     position: relative;
-    z-index: 2; /* Ensure content appears above the carousel */
-    color: white; /* Contrast text color for readability */
-    text-align: center;
 }
 
-.btn {
-    margin: 10px;
+/* Add an overlay for better text readability */
+#story-list-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: 1;
 }
 
-/* Customize the card */
+/* Ensure the content is above the overlay */
+#story-list-container > * {
+    position: relative;
+    z-index: 2;
+}
+
 .custom-card {
     background-color: #f8f9fa; /* Light grey background */
     border: 1px solid #ddd; /* Subtle border */
@@ -88,25 +135,32 @@ body, html {
     text-shadow: none; /* Remove text shadow */
 }
 
-/* Customize the button */
-.custom-btn {
-    background-color: #333;
-    color: #fff; /* White text */
-    border: none; /* Remove border */
-    border-radius: 4px; /* Rounded button */
-    padding: 8px 16px;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-.custom-btn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-    color: #fff;
-}
-
-/* Add space between rows */
 .card {
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Add space between rows */
+}
+
+/*********************** STORY DETAIL PAGE *********************/
+
+#story-detail-container {
+    background-image: url('/static/images/tower.jpg'); /* Path to your background image */
+    background-size: cover; /* Ensures the image covers the container */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating */
+    padding : 50px;
+    border-radius: 8px; /* Optional: Add rounded corners */
+    color: white; /* Text color for readability */
+    position: relative;
+}
+
+#story-detail-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
 }
 
 .story-card {
@@ -139,62 +193,9 @@ body, html {
     margin-bottom: 20px;
     text-align: left;
     text-shadow: none; /* Remove text shadow */
-
 }
 
-
-#story-list-container {
-    background-image: url('/static/images/empire.jpg'); /* Path to your background image */
-    background-size: cover; /* Ensures the image covers the container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents repeating */
-    padding : 50px;
-    border-radius: 8px; /* Optional: Add rounded corners */
-    color: white; /* Text color for readability */
-    position: relative;
-}
-
-/* Add an overlay for better text readability */
-#story-list-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-    z-index: 1;
-}
-
-/* Ensure the content is above the overlay */
-#story-list-container > * {
-    position: relative;
-    z-index: 2;
-}
-
-#story-detail-container {
-    background-image: url('/static/images/tower.jpg'); /* Path to your background image */
-    background-size: cover; /* Ensures the image covers the container */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents repeating */
-    padding : 50px;
-    border-radius: 8px; /* Optional: Add rounded corners */
-    color: white; /* Text color for readability */
-    position: relative;
-}
-
-#story-detail-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    z-index: 1;
-}
-
-/* Full-page background image */
+/*********************** LOGIN/SIGNUP/LOGOUT PAGES *********************/
 .login-container {
     background-image: url('/static/images/stonehenge.jpg'); /* Path to your background image */
     background-size: cover;
@@ -220,7 +221,6 @@ body, html {
     z-index: 1;
 }
 
-/* Login card styling */
 .login-card {
     position: relative;
     z-index: 2; /* Above the overlay */
@@ -236,15 +236,15 @@ body, html {
 }
 
 
+/*********************** FORMS *********************/
 
-/* Form styling */
 form.login {
     margin-top: 20px;
     
 }
 
 form.login .primaryAction {
-    background-color: #333; /* Primary blue button */
+    background-color: #333;
     color: white;
     border: none;
     border-radius: 4px;
@@ -268,6 +268,8 @@ form.login .secondaryAction {
 form.login .secondaryAction:hover {
     text-decoration: underline;
 }
+
+/*********************** FOOTER *********************/
 
 footer {
     position: fixed;
