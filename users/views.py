@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from stories.models import Story
+from stories.forms import StoryForm
 
 # Create your views here.
 @login_required

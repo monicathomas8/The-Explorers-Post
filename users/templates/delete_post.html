@@ -3,7 +3,7 @@
 {% block title %}Delete Post{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="posts-container">
     <h1>Are you sure you want to delete "{{ story.title }}"?</h1>
     <form method="POST">
         {% csrf_token %}
