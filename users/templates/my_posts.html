@@ -3,7 +3,7 @@
 {% block title %}My Posts{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container" class="posts-container">
     <h1>My Posts</h1>
 
     <h2>Drafts</h2>
@@ -11,8 +11,8 @@
         {% for story in drafts %}
         <li>
             <h3>{{ story.title }}</h3>
-            <a href="#">Edit</a> |
-            <a href="#">Delete</a>
+            <a href="{% url 'edit_post' story.id %}">Edit</a> |
+            <a href="{% url 'delete_post' story.id' %}">Delete</a>
         </li>
         {% empty %}
         <p>No drafts available.</p>
