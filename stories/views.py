@@ -1,7 +1,9 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 from .models import Story
 from .forms import StoryForm
+
 
 # Create your views here.
 
@@ -22,6 +24,11 @@ def create_story(request):
             story.author = request.user  # Set the current logged-in user as the author
             story.status = 0  # Default to "Draft" or adjust as needed
             story.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Story submitted and awaiting approval'
+            )
+
             return redirect('story_list')  # Redirect to the list of stories
     else:
         form = StoryForm()
