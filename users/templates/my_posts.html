@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}My Posts{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>My Posts</h1>
+
+    <h2>Drafts</h2>
+    <ul>
+        {% for story in drafts %}
+        <li>
+            <h3>{{ story.title }}</h3>
+            <a href="#">Edit</a> |
+            <a href="#">Delete</a>
+        </li>
+        {% empty %}
+        <p>No drafts available.</p>
+        {% endfor %}
+    </ul>
+
+    <h2>Published</h2>
+    <ul>
+        {% for story in published %}
+        <li>
+            <h3>{{ story.title }}</h3>
+            <a href="#">Edit</a> |
+            <a href="#">Delete</a>
+        </li>
+        {% empty %}
+        <p>No published stories yet.</p>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
