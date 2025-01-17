@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
-{% block title %}Welcome to The Explorer's Post{% endblock %}
+{% block title %}{{ story.title }} Explorer Story {% endblock %}
 
 {% block content %}
-<div id="story-detail-container">
+<div class="story-list-container detail-page">
     <div class="story-card">
         <h1>{{ story.title }}</h1>
         <h5 class="text-muted">By {{ story.author }}</h5>
@@ -11,6 +11,4 @@
         <a href="{% url 'story_list' %}" class="btn custom-btn">Back to Stories</a>
     </div>
 </div>
-{%endblock%}
-
-
+{% endblock %}

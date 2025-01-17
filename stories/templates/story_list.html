@@ -3,8 +3,7 @@
 {% block title %}Welcome to The Explorer's Post{% endblock %}
 
 {% block content %}
-
-<div id="story-list-container" class="my-4">
+<div class="story-list-container explore-stories my-4">
     <div class="row">
         {% for story in stories %}
         <div class="col-md-4">
@@ -20,6 +19,4 @@
         {% endfor %}
     </div>
 </div>
-
-
 {% endblock %}

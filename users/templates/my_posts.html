@@ -1,36 +1,47 @@
 {% extends "base.html" %}
 
-{% block title %}My Collection{% endblock %}
+{% block title %}My Collection - The Explorer's Post{% endblock %}
 
 {% block content %}
-<div class="posts-container">
+<div class="story-list-container my-collection">
     <h1>My Collection</h1>
 
     <h2>Drafts</h2>
-    <ul>
+    <div class="row">
         {% for story in drafts %}
-        <li>
-            <h3><a href="#">{{ story.title }}</a></h3>
-            
-            <a href="{% url 'edit_story' story.id %}">Edit</a> |
-            <a href="{% url 'delete_story' story.id %}">Delete</a>
-        </li>
+        <div class="col-md-4">
+            <div class="card mb-3 custom-card">
+                <div class="card-body">
+                    <h3 class="card-title">{{ story.title }}</h3>
+                    <div class="card-text">
+                        <a href="{% url 'edit_story' story.id %}" class="btn custom-btn">Edit</a>
+                        <a href="{% url 'delete_story' story.id %}" class="btn custom-btn">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         {% empty %}
         <p>No drafts available.</p>
         {% endfor %}
-    </ul>
+    </div>
 
     <h2>Published</h2>
-    <ul>
+    <div class="row">
         {% for story in published %}
-        <li>
-            <h3><a href="#">{{ story.title }}</a></h3> 
-            <a href="{% url 'edit_story' story.id %}">Edit</a> |
-            <a href="{% url 'delete_story' story.id %}">Delete</a>
-        </li>
+        <div class="col-md-4">
+            <div class="card mb-3 custom-card">
+                <div class="card-body">
+                    <h3 class="card-title">{{ story.title }}</h3>
+                    <div class="card-text">
+                        <a href="{% url 'edit_story' story.id %}" class="btn custom-btn">Edit</a>
+                        <a href="{% url 'delete_story' story.id %}" class="btn custom-btn">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
         {% empty %}
         <p>No published stories yet.</p>
         {% endfor %}
-    </ul>
+    </div>
 </div>
 {% endblock %}

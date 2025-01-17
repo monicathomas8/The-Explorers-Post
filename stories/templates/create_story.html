@@ -5,15 +5,14 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-<div id="create-story-container">
-    <div class="form-card">
-        <h1>Create a New Story</h1>
-        <form method="POST">
-            {% csrf_token %}
-            {{ form|crispy }} <!-- Crispy Forms handles form styling -->
+<div class="story-list-container create-page">
+    <h1>Create a New Story</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }} <!-- Crispy Forms handles form styling -->
+        <div class="action-buttons">
             <button type="submit" class="btn custom-btn">Submit Story</button>
-        </form>
-    </div>
+        </div>
+    </form>
 </div>
-
-{%endblock%}
+{% endblock %}
