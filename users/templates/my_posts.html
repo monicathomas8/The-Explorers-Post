@@ -12,8 +12,8 @@
         <li>
             <h3><a href="#">{{ story.title }}</a></h3>
             
-            <a href="{% url 'edit_post' story.id %}">Edit</a> |
-            <a href="{% url 'delete_post' story.id %}">Delete</a>
+            <a href="{% url 'edit_story' story.id %}">Edit</a> |
+            <a href="{% url 'delete_story' story.id %}">Delete</a>
         </li>
         {% empty %}
         <p>No drafts available.</p>
@@ -25,8 +25,8 @@
         {% for story in published %}
         <li>
             <h3><a href="#">{{ story.title }}</a></h3> 
-            <a href="{% url 'edit_post' story.id %}">Edit</a> |
-            <a href="{% url 'delete_post' story.id %}">Delete</a>
+            <a href="{% url 'edit_story' story.id %}">Edit</a> |
+            <a href="{% url 'delete_story' story.id %}">Delete</a>
         </li>
         {% empty %}
         <p>No published stories yet.</p>

@@ -22,7 +22,6 @@
 
 <body>
     <header>
-
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'landing_page' %}">Explorer's Posts</a>
@@ -33,33 +32,22 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-link" aria-current="page" href="{% url 'landing_page' %}">Home</a>
+                        <a class="nav-link" href="{% url 'landing_page' %}">Home</a>
                         <a class="nav-link" href="{% url 'story_list' %}">Explore Stories</a>
                         <a class="nav-link" href="{% url 'create_story' %}">Share Your Story</a>
-
                         {% if user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'account_logout' %}">Logout</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'my_posts' %}">My Posts</a>
-                        </li>
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        <a class="nav-link" href="{% url 'my_posts' %}">My Posts</a>
                         {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'account_signup' %}">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'account_login' %}">Sign in</a>
-                        </li>
+                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                        <a class="nav-link" href="{% url 'account_login' %}">Sign in</a>
                         {% endif %}
                     </div>
                 </div>
             </div>
         </nav>
     </header>
+        
 
     <div class="wrapper">
         <main class="content">
