@@ -274,7 +274,7 @@ form.login .secondaryAction:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 100vh; /* Full viewport height */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -294,14 +294,25 @@ form.login .secondaryAction:hover {
     z-index: 1;
 }
 
+#create-story-container h1 {
+    position: relative; /* Place above overlay */
+    z-index: 2; /* Ensure visibility */
+    color: white; /* High contrast */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add spacing below */
+    font-size: 2.5rem; /* Make it prominent */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Improve readability */
+}
+
 .form-card {
     position: relative;
     z-index: 2;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     padding: 30px;
     width: 100%;
     max-width: 600px; /* Adjust card width */
+    margin: 0 auto;
 }
 
 /*********************** MY STORIES/EDIT/DELETE PAGES *********************/
