@@ -1,6 +1,8 @@
 from django.db import models
 
-# Create your models here.
+"""
+Represents a contact form submission with user details and message content.
+"""
 class Contact(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()

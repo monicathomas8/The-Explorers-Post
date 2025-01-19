@@ -3,10 +3,15 @@ from django.contrib import messages
 from .forms import ContactForm
 
 
+"""
+Renders the landing page.
+"""
 def landing_page(request):
     return render(request, 'landing_page.html')
 
-
+"""
+Handles the contact form submission and displays the contact page.
+"""
 def contact(request):
     if request.method == 'POST':
         form= ContactForm(request.POST)

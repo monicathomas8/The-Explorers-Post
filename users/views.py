@@ -5,7 +5,10 @@ from django.contrib import messages
 from stories.models import Story
 from stories.forms import StoryForm
 
-# Create your views here.
+
+"""
+Displays the user's draft and published stories.
+"""
 @login_required
 def my_posts(request):
     drafts = Story.objects.filter(author=request.user, status=0)  # Drafts
@@ -13,11 +16,11 @@ def my_posts(request):
     return render(request, 'my_posts.html', {'drafts': drafts, 'published': published})
 
 
+"""
+View to edit a story by the logged-in user
+"""
 @login_required
 def edit_story(request, post_id):
-    """
-    View to edit a story by the logged-in user
-    """
     story = get_object_or_404(Story, id=post_id, author=request.user)  # Ensure the user owns the story
     if request.method == "POST":
         form = StoryForm(data=request.POST, instance=story)  # Prepopulate the form with story data
@@ -33,15 +36,15 @@ def edit_story(request, post_id):
     return render(request, 'edit_story.html', {'form': form, 'story': story})
 
 
+"""
+View to delete a story by the logged-in user
+"""
 @login_required
 def delete_story(request, post_id):
-    """
-    View to delete a story by the logged-in user
-    """
-    story = get_object_or_404(Story, id=post_id, author=request.user)  # Ensure the user owns the story
+    story = get_object_or_404(Story, id=post_id, author=request.user)
     if request.method == "POST":
-        story.delete()  # Delete the story
+        story.delete()  
         messages.add_message(request, messages.SUCCESS, 'Story deleted successfully!')
-        return redirect('my_posts')  # Redirect to user's stories page
+        return redirect('my_posts')  
 
     return render(request, 'delete_story.html', {'story': story})

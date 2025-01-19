@@ -2,8 +2,10 @@ from django.contrib import admin
 from .models import Story
 from django_summernote.admin import SummernoteModelAdmin
 
-# Register your models here.
 
+"""
+Admin configuration for managing stories in the admin panel.
+"""
 @admin.register(Story)
 class StoryAdmin(SummernoteModelAdmin):
     list_display = ('title', 'author', 'get_status_display', 'created_on')
