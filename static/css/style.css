@@ -286,6 +286,8 @@ form .secondaryAction:hover {
     margin: 10px; /* Space between buttons */
 }
 
+
+
 /********** footer **********/
 
 footer {
@@ -321,4 +323,3 @@ footer {
 .footer-list a:hover {
     color: #0056b3;
 }
-

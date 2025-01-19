@@ -12,7 +12,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ story.title }}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">By {{ story.author }}</h6>
-                    <p class="card-text">{{ story.content|truncatewords:20 }}</p>
+                    <p class="card-text">{{ story.content|truncatewords:20|safe }}</p>
                     <a href="{% url 'story_detail' story.slug %}" class="btn custom-btn">Read More</a>
                 </div>
             </div>
