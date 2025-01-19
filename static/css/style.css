@@ -66,7 +66,7 @@ body, html {
     padding: 20px;
     max-width: 800px;
     margin: 0 auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.105); /* Subtle shadow */
     color: #333; /* Text color for contrast */
 }
 
@@ -94,7 +94,6 @@ body, html {
 .story-list-container.create-page {
     background-image: url('/static/images/parthenon.jpg');
 }
-
 
 /********** Text Styling **********/
 
@@ -137,6 +136,74 @@ body, html {
 .story-list-container a:hover {
     text-decoration: underline;
 }
+
+/*************** Login/Signup/Logout Pages ***************/
+.login-container {
+    background-image: url('/static/images/stonehenge.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    padding: 20px;
+    position: relative; /* Required for overlay */
+}
+
+/* Add an overlay for readability */
+.login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1; /* Keep behind content */
+}
+
+.login-card {
+    position: relative;
+    z-index: 2; /* Above overlay */
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 30px;
+    width: 100%;
+    max-width: 400px; /* Constrain width */
+    text-align: center; /* Center-align text */
+}
+
+/* Primary button */
+form .primaryAction {
+    background-color: #333; /* Consistent with custom-btn */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+form .primaryAction:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Secondary links */
+form .secondaryAction {
+    display: block;
+    margin-top: 10px;
+    color: #007bff; /* Link color */
+    text-decoration: none;
+}
+
+form .secondaryAction:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
 
 /********** Other Components **********/
 

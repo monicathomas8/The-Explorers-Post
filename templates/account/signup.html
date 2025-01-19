@@ -1,28 +1,17 @@
 {% extends 'base.html' %}
 
-{% load i18n %}
-{% load account socialaccount %}
-
-{% block title %}Welcome to The Explorer's Post{% endblock %}
+{% block title %}Sign Up - The Explorer's Post{% endblock %}
 
 {% block content %}
-
 <div class="login-container">
-  <div class="login-card">
-    <h1>{% trans "Sign Up" %}</h1>
-
-    <p>{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
-    </p>
-
-    <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-      {% csrf_token %}
-      {{ form.as_p }}
-      {% if redirect_field_value %}
-      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-      {% endif %}
-      <button class="custom-btn" type="submit">{% trans "Sign Up" %} &raquo;</button>
-    </form>
-  </div>
+    <div class="login-card">
+        <h1>Sign Up</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn custom-btn primaryAction">Sign Up</button>
+        </form>
+        <a href="{% url 'account_login' %}" class="secondaryAction">Already have an account? Sign In</a>
+    </div>
 </div>
-
-{% endblock content %}
+{% endblock %}
