@@ -44,6 +44,7 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: antiquewhite;
     min-height: 100%; 
     padding-top: 70px;
     padding-bottom: 20px;
@@ -99,6 +100,25 @@ main {
 
 .story-list-container.create-page {
     background-image: url('/static/images/parthenon.jpg');
+}
+
+/****************** Django Messages ******************/
+
+.message-container {
+    position: fixed;
+    top: 60px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050; /* Ensure messages appear above other elements */
+    width: 90%; /* Make it responsive for smaller screens */
+    max-width: 800px; /* Limit the width */
+    padding: 10px; /* Add padding for breathing space */
+}
+
+.message-container .alert {
+    margin-bottom: 10px; /* Space between multiple messages */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: whitesmoke;
 }
 
 /********** Text Styling for stories **********/
