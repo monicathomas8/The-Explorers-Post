@@ -1,9 +1,14 @@
-/********** Global Styles **********/
+/********************* Global Styles ************************/
 body, html {
     margin: 0;
-    padding: 0;
     height: 100%;
-    padding-top: 50px; /* Accounts for fixed navbar */
+    padding: 0;
+    display:flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 .navbar {
@@ -33,14 +38,15 @@ body, html {
     color: #fff;
 }
 
-/********** Shared Layout Styles **********/
+/************************ Shared Layout Styles **************************/
 
 .story-list-container {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    min-height: 100vh; /* Full viewport height */
-    padding: 50px 20px; /* Add spacing around content */
+    min-height: 100%; 
+    padding-top: 70px;
+    padding-bottom: 20px;
     position: relative; /* Required for overlay positioning */
     overflow: auto;
 }
@@ -70,7 +76,8 @@ body, html {
     color: #333; /* Text color for contrast */
 }
 
-/* Page-specific backgrounds */
+/************** Page-specific backgrounds ******************/
+
 .story-list-container.explore-stories {
     background-image: url('/static/images/empire.jpg')
 }
@@ -95,7 +102,7 @@ body, html {
     background-image: url('/static/images/parthenon.jpg');
 }
 
-/********** Text Styling **********/
+/********** Text Styling for stories **********/
 
 .story-list-container h1 {
     text-align: center;
@@ -138,6 +145,7 @@ body, html {
 }
 
 /*************** Login/Signup/Logout Pages ***************/
+
 .login-container {
     background-image: url('/static/images/stonehenge.jpg'); 
     background-size: cover;
@@ -205,27 +213,66 @@ form .secondaryAction:hover {
 }
 
 
-/********** Other Components **********/
+/********************** Home Page **********************/
+.landing-page {
+    position: relative;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.carousel-content {
+    position: relative;
+    width: 100%;
+    height: 100%; /* Ensure it fills the viewport */
+    overflow: hidden;
+}
+
+/* Carousel Styling */
 .carousel {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Send behind content */
-    overflow: hidden; /* Prevent scrollbars */
+    z-index: 1; /* Sits behind the text overlay */
 }
 
 .carousel-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Scale to fill the area */
+    object-fit: cover; /* Ensures the image scales without distortion */
 }
 
+/* Text Overlay Styling */
+.content-overlay {
+    position: relative;
+    z-index: 2; /* Sits above the carousel */
+    text-align: center; /* Center text */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Makes text readable over images */
+    padding: 20px;
+}
+
+.content-overlay h1 {
+    font-size: 3rem; /* Prominent heading */
+    margin-bottom: 20px;
+}
+
+.content-overlay p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.content-overlay a {
+    margin: 10px; /* Space between buttons */
+}
+
+/********** footer **********/
+
 footer {
-    position: fixed;
-    bottom: 0;
+    position: relative;
     width: 100%;
     z-index: 2;
     background-color: white;

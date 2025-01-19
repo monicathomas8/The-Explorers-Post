@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="landing-page">
-    <!-- Carousel (Background) -->
+
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -19,10 +19,17 @@
         </div>
     </div>
 
-    <!-- Content Overlay -->
-    <div class="content">
+    <!-- Text Overlay -->
+    <div class="content-overlay">
         <h1>Welcome to The Explorer's Post</h1>
-        <p>Explore the world's most iconic destinations!</p>
+        <h3>Explore the world's most iconic destinations, 
+            through the eyes of everyday travellers!
+        </h3>
+        <p>Discover captivating stories from fellow travelers 
+            and share your own adventures. 
+            Keep cherished memories alive and inspire others 
+            to embark on their next journey!
+    </p>
         <a href="{% url 'story_list' %}" class="btn btn-primary custom-btn">Explore Stories</a>
         <a href="{% url 'create_story' %}" class="btn btn-primary custom-btn">Share Your Story</a>
     </div>
