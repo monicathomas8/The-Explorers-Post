@@ -298,3 +298,27 @@ footer {
     padding: 10px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
 }
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.footer-list a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.footer-list a:hover {
+    color: #0056b3;
+}
+
