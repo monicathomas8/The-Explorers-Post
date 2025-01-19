@@ -44,7 +44,6 @@ main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: antiquewhite;
     min-height: 100%; 
     padding-top: 70px;
     padding-bottom: 20px;
@@ -73,7 +72,8 @@ main {
     max-width: 800px;
     margin: 0 auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.105); /* Subtle shadow */
-    color: #333; /* Text color for contrast */
+    color: black; /* Text color for contrast */
+    background-color: rgba(255, 255, 255, 0.55);
 }
 
 /************** Page-specific backgrounds ******************/
