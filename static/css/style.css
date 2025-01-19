@@ -102,6 +102,9 @@ main {
     background-image: url('/static/images/parthenon.jpg');
 }
 
+.story-list-container.contact-page {
+    background-image: url('/static/images/japan.jpg');
+}
 /****************** Django Messages ******************/
 
 .message-container {
@@ -214,7 +217,7 @@ form .primaryAction {
 }
 
 form .primaryAction:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #0056b3;
 }
 
 /* Secondary links */
