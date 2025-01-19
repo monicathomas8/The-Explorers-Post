@@ -73,7 +73,7 @@ main {
     margin: 0 auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.105); /* Subtle shadow */
     color: black; /* Text color for contrast */
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.566);
 }
 
 /************** Page-specific backgrounds ******************/

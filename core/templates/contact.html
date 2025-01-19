@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us{% endblock %}
+
+{% block content %}
+<div class="story-list-container">
+    <h1>Contact Us</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn custom-btn">Submit</button>
+    </form>
+</div>
+{% endblock %}
