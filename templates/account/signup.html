@@ -11,7 +11,8 @@
             {{ form.as_p }}
             <button type="submit" class="btn custom-btn primaryAction">Sign Up</button>
         </form>
-        <a href="{% url 'account_login' %}" class="secondaryAction">Already have an account? Sign In</a>
+        <a href="{% url 'account_login' %}" class="secondaryAction" aria-label="link to sign in">
+            Already have an account? Sign In</a>
     </div>
 </div>
 {% endblock %}

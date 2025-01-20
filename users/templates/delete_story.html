@@ -5,6 +5,7 @@
 {% block content %}
 <div class="story-list-container delete-page">
     <h1>Are you sure you want to delete "{{ story.title }}"?</h1>
+    <h2>Note! This action can not be undone!</h2>
     <form method="POST">
         {% csrf_token %}
         <div class="action-buttons">
