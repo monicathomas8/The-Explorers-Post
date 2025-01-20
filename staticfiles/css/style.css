@@ -252,6 +252,21 @@ form .secondaryAction:hover {
     align-items: center;
 }
 
+.landing-page .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+}
+
+.landing-page .carousel {
+    display: block; 
+}
+
 .carousel-content {
     position: relative;
     width: 100%;
@@ -344,5 +359,29 @@ footer {
 
     .story-list-container {
         padding: 10px; /* Reduce overall padding for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .landing-page .carousel {
+        display: none; /* Hide the carousel */
+    }
+
+    .landing-page {
+        background-image: url('/static/images/colosseum1.jpg'); /* Mobile-optimized background */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh; /* Full-screen height */
+    }
+
+    .landing-page .content {
+        position: relative;
+        top: 20%; /* Adjust text position */
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8); /* Light background for better readability */
+        color: #333;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 }
