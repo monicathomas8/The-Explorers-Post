@@ -6,8 +6,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path("accounts/", include("allauth.urls")),
     path('stories/', include('stories.urls')),  # Routes to Stories app URLs
-    path('summernote/', include('django_summernote.urls')), # Route to include summernote
-    path('users/', include('users.urls')), # Routes to users app urls
+    path('summernote/', include('django_summernote.urls')),
+    path('users/', include('users.urls')),  # Routes to users app urls
     path('', include('core.urls')),  # Routes the root URL to the core app
-    
+
 ]

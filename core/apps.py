@@ -1,9 +1,9 @@
 from django.apps import AppConfig
 
 
-"""
-Configuration class for the Core app.
-"""
 class CoreConfig(AppConfig):
+    """
+    Configuration class for the Core app.
+    """
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'core'
