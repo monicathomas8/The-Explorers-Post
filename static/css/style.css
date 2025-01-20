@@ -47,8 +47,18 @@ main {
     min-height: 100%; 
     padding-top: 70px;
     padding-bottom: 20px;
-    position: relative; /* Required for overlay positioning */
+    position: relative; 
     overflow: auto;
+}
+
+/* Ensure form elements are responsive */
+.story-list-container form textarea {
+    width: 100%; /* Make textarea take up full width of its container */
+    max-width: 100%; /* Prevent it from exceeding container width */
+    box-sizing: border-box; /* Include padding and border in the width */
+    resize: vertical; /* Allow resizing only vertically */
+    padding: 10px; /* Add some padding for better usability */
+    font-size: 16px; /* Ensure readable font size */
 }
 
 /* Overlay for readability */
@@ -290,7 +300,6 @@ form .secondaryAction:hover {
 }
 
 
-
 /********** footer **********/
 
 footer {
@@ -325,4 +334,15 @@ footer {
 
 .footer-list a:hover {
     color: #0056b3;
+}
+
+/*************** Media query for smaller screens ********************/
+@media (max-width: 576px) {
+    .story-list-container form textarea {
+        font-size: 14px; /* Adjust font size for small screens */
+    }
+
+    .story-list-container {
+        padding: 10px; /* Reduce overall padding for smaller screens */
+    }
 }
