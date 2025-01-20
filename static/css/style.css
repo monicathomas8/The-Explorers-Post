@@ -89,31 +89,31 @@ main {
 /************** Page-specific backgrounds ******************/
 
 .story-list-container.explore-stories {
-    background-image: url('/static/images/empire.jpg')
+    background-image: url('/static/images/state1.jpg')
 }
 
 .story-list-container.my-collection {
-    background-image: url('/static/images/sydney.jpg'); 
+    background-image: url('/static/images/sydney1.jpg'); 
 }
 
 .story-list-container.detail-page {
-    background-image: url('/static/images/tower.jpg');
+    background-image: url('/static/images/tower1.jpg');
 }
 
 .story-list-container.delete-page {
-    background-image: url('/static/images/sphinx.jpg');
+    background-image: url('/static/images/sphinx1.jpg');
 }
 
 .story-list-container.edit-page {
-    background-image: url('/static/images/wall.jpg');
+    background-image: url('/static/images/wall1.jpg');
 }
 
 .story-list-container.create-page {
-    background-image: url('/static/images/parthenon.jpg');
+    background-image: url('/static/images/parthenon1.jpg');
 }
 
 .story-list-container.contact-page {
-    background-image: url('/static/images/japan.jpg');
+    background-image: url('/static/images/japan1.jpg');
 }
 /****************** Django Messages ******************/
 
