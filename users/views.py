@@ -47,8 +47,9 @@ def delete_story(request, post_id):
     story = get_object_or_404(Story, id=post_id, author=request.user)
     if request.method == "POST":
         story.delete()
-        messages.add_message(request, messages.SUCCESS,
-                             'Story deleted successfully!')
+        messages.add_message(
+            request, messages.SUCCESS,'Story deleted successfully!'
+        )
         return redirect('my_posts')
 
     return render(request, 'delete_story.html', {'story': story})
