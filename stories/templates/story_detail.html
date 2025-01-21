@@ -7,6 +7,7 @@
     <div class="story-card">
         <h1>{{ story.title }}</h1>
         <h5 class="text-muted">By {{ story.author }}</h5>
+        <p class="text-muted" >Created on: {{ story.created_on|date:"F j, Y" }}</p>
         <p class="story-content">{{ story.content }}</p>
         <a href="{% url 'story_list' %}" class="btn custom-btn">Back to Stories</a>
     </div>
