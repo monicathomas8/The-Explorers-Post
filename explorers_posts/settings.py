@@ -33,6 +33,8 @@ ALLOWED_HOSTS = [
     '8000-monicathoma-theexplorer-9km8v8dopdg.ws.codeinstitute-ide.net',
     '8000-monicathoma-theexplorer-3jpmcxsz61t.ws.codeinstitute-ide.net',
     '.herokuapp.com',
+    'the-ep-9aae432261ad.herokuapp.com', 
+    '127.0.0.1',
 ]
 
 # Application definition
