@@ -103,6 +103,8 @@ main {
 .story-list-container.contact-page {
     background-image: url('/static/images/japan1.jpg');
 }
+
+
 /****************** Django Messages ******************/
 
 .message-container {
@@ -154,7 +156,7 @@ main {
     z-index: 10; /* content sits above the grid */
     text-align: center; 
     color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.995);
     padding: 20px;
     max-width: 800px;
     border-radius: 8px;
@@ -226,7 +228,7 @@ main {
 /*************** Login/Signup/Logout Pages ***************/
 
 .login-container {
-    background-image: url('/static/images/stonehenge.jpg'); 
+    background-image: url('/static/images/stonehenge1.jpg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -253,7 +255,7 @@ main {
 .login-card {
     position: relative;
     z-index: 2; /* Above overlay */
-    background-color: rgba(255, 255, 255, 0.9); /* Light background for readability */
+    background-color: rgba(255, 255, 255, 0.564); /* Light background for readability */
     border: 1px solid #ddd; /* Subtle border */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
@@ -346,7 +348,7 @@ footer {
     }
 
     .landing-page div:nth-child(3) {
-        background-image: url('/static/images/wall1.jpg');
+        background-image: url('/static/images/parthenon1.jpg');
     }
 }
 /* laptops and desktops */
