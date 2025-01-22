@@ -219,3 +219,42 @@ This project was deployed locally first and then hosted on Heroku. Follow these 
 8. **Access the Application**:
    - Once deployment is complete, open the app using the URL:
 
+## Summary
+
+Throughout the development of *The Explorer's Post*, I have gained valuable insights into project structuring, feature planning, and future enhancements. Reflecting on my work, there are several areas I would approach differently and ideas I’d like to implement in the future:
+
+1. **Renaming Apps for Clarity**:  
+   With my growing understanding, I realize that naming the apps more intuitively would enhance the project’s readability and organization.  
+   - The `core` app, which currently handles the homepage, could be renamed to **home**, as it better represents its functionality.  
+   - The `stories` app could be renamed to **posts**, avoiding confusion with the concept of "user stories" and better reflecting its purpose of handling user-submitted posts.  
+   - Additionally, the project name itself could replace `core`, ensuring that the app structure aligns more closely with best practices.
+
+2. **Future Features and Enhancements**:  
+   While this version of the project fulfills the primary objectives, I have identified several features for future development:  
+   - **Liking Stories**: Enabling users to like stories to show appreciation.  
+   - **Leaving Comments**: Allowing users to engage with stories by leaving comments.  
+   - **Adding Photos to Stories**: Users could upload images to accompany their stories.  
+   - **User Profiles**: Creating profiles for registered users to manage their submissions and preferences.  
+   - **Searching Stories by Location**: Implementing a search feature to filter stories by destination.
+
+3. **Visual Enhancements**:  
+   To make the landing page more visually appealing, I would like to redesign it with a photo collage layout. Stacking photos in a creative, overlapping style would immediately capture users' attention and highlight the vibrant stories shared on the platform.
+
+These future improvements reflect my commitment to enhancing both functionality and user experience as I continue to grow my skills and understanding of web development.
+
+## Credits
+
+### Content
+- This project was designed and developed by **Monica Thomas** as part of the Code Institute Full-Stack Development Diploma.
+
+### Tutorials and Resources
+- **Tech With Tim**: [Django Beginner Tutorial](https://youtu.be/sm1mokevMWk?si=x647nUCIvSpyD2lU)  
+- **Programming with Mosh**: [Django Full Course](https://youtu.be/rHux0gMZ3Eg?si=SBKdrSZ061fcF1YV)  
+- **Bootstrap Documentation**: Used for styling components and understanding responsive design.
+- **Resize Pixel**: [Resizing images](https://www.resizepixel.com/)
+- **Audible books**: Clean Agile, Clean Code, The Clean Coder all by Robert C. Martin
+
+
+### Acknowledgements
+- Special thanks to the Code Institute community and my mentor Iuliia Konovalova for support and guidance throughout this project.
+
