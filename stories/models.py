@@ -27,7 +27,6 @@ class Story(models.Model):
     )
     status = models.IntegerField(choices=STATUS, default=0)
     created_on = models.DateTimeField(auto_now_add=True)
-    excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
 
     def save(self, *args, **kwargs):
