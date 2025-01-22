@@ -7,9 +7,9 @@
     <h1>My Collection</h1>
 
     <div class="row">
+        <h5>My Drafts - stories awaiting approval</h5>
         {% for story in drafts %}
         <div class="col-md-4">
-            <h5>Story Draft</h5>
             <div class="card mb-4 custom-card">
                 <div class="card-body">
                     <h5 class="card-title">{{ story.title }}</h5>
@@ -27,7 +27,7 @@
     </div>
 
     <div class="row">
-        <h5>Published</h5>
+        <h5>My Published Stories</h5>
         {% for story in published %}
         <div class="col-md-4">
             <div class="card mb-4 custom-card">
