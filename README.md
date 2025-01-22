@@ -1,8 +1,44 @@
 # The Explore's Post 
 
-## Overview
+## About
 **The Explorer's Post** is a dynamic web application designed to share and explore captivating travel stories.
 Users can browse, share, manage personal travel experiences. Keeping cherished memories alive, while inspiring others to embark on their own adventures.
+
+<img>
+<img>
+
+## User Experience Design
+### Strategy
+The Explorer's Post aims to:
+-	Provide a platform for users to share travel stories.
+- Allow visitors to explore stories written by other users.
+- Foster a community of travel enthusiasts by enabling story sharing and feedback.
+### Target Audience
+- **Travel enthusiasts:** Those who wish to share their adventures.
+- **Aspiring travellers:** People looking for inspiration for their next journey.
+- **General audience:** Visitors interested in reading engaging travel stories.
+
+## Technologies Used
+- **Languages**: Python, HTML, CSS, JavaScript
+- **Frameworks and Libraries**: Django, Bootstrap
+- **Other Libraries**:
+  - `django-crispy-forms`: Simplified form styling.
+  - `django-summernote`: Rich text editor for story content.
+  - `whitenoise`: Static file management in production.
+- **Database**: SQLite, PostgreSQL
+- **Hosting**: Heroku and GitHub
+
+## Other Tools
+- Heroku (Deployment)
+- GitPod (Development environment)
+- GitHub (Version control)
+- W3C Validator (HTML validation)
+- Jigsaw Validator (CSS validation)
+- PEP8 (Python code validation)
+
+<img src="/static/images/Screenshot154354.png">
+<img src="/static/images/Screenshot154502.png">
+<img src="/static/images/Screenshot154927.png">
 
 ## Features
 - **Landing Page**: An engaging home page with a responsive layout showcasing the purpose of the site.
@@ -13,18 +49,10 @@ Users can browse, share, manage personal travel experiences. Keeping cherished m
 - **Authentication**: Users can register, log in, and log out to access personalized features.
 - **Responsive Design**: Fully responsive for an optimal experience across devices.
 
-## Technologies Used
-- **Backend**: Django (Python)
-- **Frontend**: HTML5, CSS, Bootstrap
-- **Database**: PostgreSQL
-- **Hosting**: Deployed on Heroku and GitHub
-- **Other Libraries**:
-  - `django-crispy-forms`: Simplified form styling.
-  - `django-summernote`: Rich text editor for story content.
-  - `whitenoise`: Static file management in production.
+
+
 
 ## Project Structure
-
 <pre>
 The-Explorers-Post/
 ├── core/            # Core app (landing page, contact form) 
