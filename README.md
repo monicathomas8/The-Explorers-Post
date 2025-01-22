@@ -3,7 +3,6 @@
 ## About
 **The Explorer's Post** is a dynamic web application designed to share and explore captivating travel stories.
 Users can browse, share, manage personal travel experiences. Keeping cherished memories alive, while inspiring others to embark on their own adventures.
-
 <img>
 <img>
 
