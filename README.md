@@ -12,6 +12,7 @@ The Explorer's Post aims to:
 -	Provide a platform for users to share travel stories.
 - Allow visitors to explore stories written by other users.
 - Foster a community of travel enthusiasts by enabling story sharing and feedback.
+<img src="/static/images/mindmap.png">
 ### Target Audience
 - **Travel enthusiasts:** Those who wish to share their adventures.
 - **Aspiring travellers:** People looking for inspiration for their next journey.
@@ -34,10 +35,6 @@ The Explorer's Post aims to:
 - W3C Validator (HTML validation)
 - Jigsaw Validator (CSS validation)
 - PEP8 (Python code validation)
-
-<img src="/static/images/Screenshot154354.png">
-<img src="/static/images/Screenshot154502.png">
-<img src="/static/images/Screenshot154927.png">
 
 ## Features
 
@@ -70,8 +67,8 @@ The images were sourced from <a href="https://www.pexels.com/search/iconic%20won
 - <a href="https://www.pexels.com/photo/photo-of-high-rise-building-755050/">Empire State Building</a>
 
 ## Information Architecture
-### Project Structure
 
+### Project Structure
 <pre>
 The-Explorers-Post/
 ├── explores_posts   # Project
@@ -89,7 +86,7 @@ The database is structured to manage users, stories, and contact form submission
 
 ### Entity-Relationship Diagram
 A detailed ERD maps the relationships between users, stories, and contact forms.
-- You see details of ERDs here <a href="/ERD.md">ERD.md</a>
+- Full details of the ERDs <a href="/ERD.md">ERD.md</a>
 
 ### Data Modelling
 - Users: Manage own stories (CRUD).
@@ -103,3 +100,34 @@ A detailed ERD maps the relationships between users, stories, and contact forms.
 #### Registered User
 - Create, edit, and delete their stories
 - Manage drafts and published stories
+
+## Testing
+
+### Manual Testing
+Behavior Driven Development was used. You can find the user story and BDD detsils here
+- Full details here <a href="/BDD.md">BDD.md</a>
+
+### Validator Testing
+- **HTML:** Validated using W3C Validator.
+-	**CSS:** Validated using W3C CSS Validator.
+-	**Python:** Checked for PEP8 compliance.
+
+<img src="/static/images/Screenshot154354.png">
+<img src="/static/images/Screenshot154502.png">
+<img src="/static/images/Screenshot154927.png">
+
+## Bugs 
+### Resolved
+1. Navigation Links Not Working: Clicking on navigation links did not navigate to the correct pages.
+**Solution:** Updated href attributes in the navigation bar to point to the correct URLs.
+2. Missing 's' in _posts in the Procfile Issue: Deployment to Heroku failed due to a typo in the Procfile (web: gunicorn explorer_post.wsgi:application was missing the s in _posts).
+**Solution:** Corrected the typo in the Procfile.
+3. Removed Unnecessary Test Code: Test code in views.py and urls.py was cluttering the project setup.
+**Solution:** Removed the unused test code.
+4. Navbar drop down menu: I added custom CSS to the bootstrap navbar, this caused the drop down menu to lose its background colour to make it visible. **Solution:** Removed my custom CSS. 
+5. Excrement code line: I had a line of code in my story model that I didn't use. **Solution:** I ran a search to see where and if it was being used. it was only in the model and two migrations. so I removed the code. 
+
+## Deployment
+
+
+
