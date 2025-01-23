@@ -227,7 +227,7 @@ This project was deployed locally first and then hosted on Heroku. Follow these 
 8. **Access the Application**:
    - Once deployment is complete, open the app using the URL:
 
-## Summary
+## Summary and Future Features
 
 Throughout the development of *The Explorer's Post*, I have gained valuable insights into project structuring, feature planning, and future enhancements. Reflecting on my work, there are several areas I would approach differently and ideas I’d like to implement in the future:
 
