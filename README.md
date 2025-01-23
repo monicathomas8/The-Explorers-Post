@@ -1,12 +1,13 @@
-# The Explore's Post 
+# The Explorer's Post 
+Live link here: [The Explorer's Post](https://the-ep-9aae432261ad.herokuapp.com/)
+
 **The Explorer's Post** is a dynamic web application designed to share and explore captivating travel stories.
-Users can browse, share, manage personal travel experiences. Keeping cherished memories alive, while inspiring others to embark on their own adventures.
+Users can browse, share and manage personal travel experiences. Keeping cherished memories alive, while inspiring others to embark on their own adventures.
 The Explorer's Post aims to:
 -	Provide a platform for users to share travel stories.
 - Allow visitors to explore stories written by other users.
 - Foster a community of travel enthusiasts by enabling story sharing and feedback.
 ### Target Audience
-
 - **Travel enthusiasts:** Those who wish to share their adventures.
 - **Aspiring travellers:** People looking for inspiration for their next journey.
 - **General audience:** Visitors interested in reading engaging travel stories.
@@ -33,6 +34,7 @@ The application features a clean and modern interface with intuitive navigation.
 
 - **Authentication**: Users can register, log in, and log out to access personalized features.
 ![sign up page](/static/images/signup.png)
+![sign in page](/static/images/signin.png)
 
 - **Responsive Design**: Fully responsive for an optimal experience across devices. These include:
 
@@ -47,23 +49,23 @@ The application features a clean and modern interface with intuitive navigation.
    
 
 ### Colour Scheme and Imagery
-The site uses white and gray coloured text and backgrounds, this is to keep the focus on the background images.
+The site uses white and gray coloured text and backgrounds for text containers. This is to keep the focus on the background images.
 High-quality travel-related images are used across the site to enhance the user experience.
-The images were sourced from <a href="https://www.pexels.com/search/iconic%20wonders/">Pexels</a>
-- <a href="https://www.pexels.com/photo/landscape-photo-of-a-snowy-top-mountain-near-body-of-water-2451035/ ">Japan</a>
-- <a href="https://www.pexels.com/photo/sunrise-over-the-great-wall-of-china-29466142/">Great Wall of China</a>
-- <a href="https://www.pexels.com/photo/great-sphinx-of-giza-under-blue-starry-sky-262780/">Sphinx</a>
-- <a href="https://www.pexels.com/photo/colosseum-italy-1797161/">Colosseum</a>
-- <a href="https://www.pexels.com/photo/desert-landscape-with-dunes-and-pyramid-of-cheops-3772630/">Pyramids</a>
-- <a href="https://www.pexels.com/photo/parthenon-in-greece-14500447/">Parthenon</a>
-- <a href="https://www.pexels.com/photo/exterior-of-sydney-opera-house-in-late-evening-5707610/">Sydney Opera House</a>
-- <a href="https://www.pexels.com/photo/aurora-borealis-1933239/">Aurora Borealis</a>
-- <a href="https://www.pexels.com/photo/eiffel-tower-paris-painting-1796716/">Eiffel Tower</a>
-- <a href="https://www.pexels.com/photo/stonehenge-under-nimbostratus-clouds-161798/">Stonehenge</a>
-- <a href="https://www.pexels.com/photo/photo-of-high-rise-building-755050/">Empire State Building</a>
+The images were sourced from [Pexels](https://www.pexels.com/search/iconic%20wonders/)
+- [Japan](https://www.pexels.com/photo/landscape-photo-of-a-snowy-top-mountain-near-body-of-water-2451035/)
+- [Great Wall of China](https://www.pexels.com/photo/sunrise-over-the-great-wall-of-china-29466142/)
+- [Sphinx](https://www.pexels.com/photo/great-sphinx-of-giza-under-blue-starry-sky-262780/)
+- [Colosseum](https://www.pexels.com/photo/colosseum-italy-1797161/)
+- [Pyramids](https://www.pexels.com/photo/desert-landscape-with-dunes-and-pyramid-of-cheops-3772630)
+- [Parthenon](https://www.pexels.com/photo/parthenon-in-greece-14500447/)
+- [Sydney Opera House](https://www.pexels.com/photo/exterior-of-sydney-opera-house-in-late-evening-5707610/)
+- [Aurora Borealis](https://www.pexels.com/photo/aurora-borealis-1933239/)
+- [Eiffel Tower](https://www.pexels.com/photo/eiffel-tower-paris-painting-1796716/)
+- [Stonehenge](https://www.pexels.com/photo/stonehenge-under-nimbostratus-clouds-161798/)
+- [Empire State Building](https://www.pexels.com/photo/photo-of-high-rise-building-755050/)
 
 ## Planning 
-During the planning and eary design stages, i use a mind map to help create the foundations of the project. 
+During the planning and early design stages, I use a mind map to help create the foundations of the project. 
 ![mind map](/static/images/mindmap.png)
 ## Technologies Used
 - **Languages**: Python, HTML, CSS, JavaScript
@@ -81,7 +83,7 @@ During the planning and eary design stages, i use a mind map to help create the 
 - GitHub (Version control)
 - W3C Validator (HTML and CSS validation)
 - PEP8 (Python code validation)
-- Favicon.io Generator [Favicon Generator](https://favicon.io/)
+- Favicon.io  [Favicon Generator](https://favicon.io/)
 
 ## Information Architecture
 ### Project Structure
@@ -114,8 +116,8 @@ A detailed ERD maps the relationships between users, stories, and contact forms.
 - View/Read published stories
 - Contact admin via the form
 #### Registered User
-- Create, edit, and delete their stories
-- Manage drafts and published stories
+- Create, read, edit, and delete their stories
+- Manage their drafts and published stories
 
 ## Testing
 
@@ -137,7 +139,7 @@ Behavior Driven Development was used.
 ### Resolved
 1. Navigation Links Not Working: Clicking on navigation links did not navigate to the correct pages.
 **Solution:** Updated href attributes in the navigation bar to point to the correct URLs.
-2. Missing 's' in _posts in the Procfile Issue: Deployment to Heroku failed due to a typo in the Procfile (web: gunicorn explorer_post.wsgi:application was missing the s in _posts).
+2. Deployment to Heroku failed:  Deployment to Heroku failed due to a typo in the Procfile (web: gunicorn explorer_post.wsgi:application was missing the s in _posts).
 **Solution:** Corrected the typo in the Procfile.
 3. Removed Unnecessary Test Code: Test code in views.py and urls.py was cluttering the project setup.
 **Solution:** Removed the unused test code.
@@ -155,15 +157,15 @@ Throughout the development of *The Explorer's Post*, I have gained valuable insi
    With my growing understanding, I realize that naming the apps more intuitively would enhance the project’s readability and organization.  
    - The `core` app, which currently handles the homepage, could be renamed to **home**, as it better represents its functionality.  
    - The `stories` app could be renamed to **posts**, avoiding confusion with the concept of "user stories" and better reflecting its purpose of handling user-submitted posts.  
-   - Additionally, the project name itself could replace `core`, ensuring that the app structure aligns more closely with best practices.
+   - Additionally, the project name itself could of been called `core`, ensuring that the app structure aligns more closely with best practices.
 
 2. **Future Features and Enhancements**:  
-   While this version of the project fulfills the primary objectives, I have identified several features for future development:  
+   While this version of the project fulfills the primary objectives, I have identified several features for future development (each item has a user story in the project board):  
    - **Liking Stories**: Enabling users to like stories to show appreciation.  
    - **Leaving Comments**: Allowing users to engage with stories by leaving comments.  
    - **Adding Photos to Stories**: Users could upload images to accompany their stories.  
    - **User Profiles**: Creating profiles for registered users to manage their submissions and preferences.  
-   - **Searching Stories by Location**: Implementing a search feature to filter stories by destination.
+   - **Searching Stories by Location**: Implementing a search feature to filter stories by location.
 
 3. **Visual Enhancements**:  
    To make the landing page more visually appealing, I would like to redesign it with a photo collage layout. Stacking photos in a creative, overlapping style would immediately capture users' attention and highlight the vibrant stories shared on the platform.
@@ -185,3 +187,5 @@ These future improvements reflect my commitment to enhancing both functionality 
 
 ### Acknowledgements
 - Special thanks to the Code Institute community and my mentor Iuliia Konovalova for support and guidance throughout this project.
+
+Live link here: [The Explorer's Post](https://the-ep-9aae432261ad.herokuapp.com/)
