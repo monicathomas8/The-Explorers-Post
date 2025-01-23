@@ -15,17 +15,34 @@ The Explorer's Post aims to:
 ### Design
 The application features a clean and modern interface with intuitive navigation. 
 - **Landing Page**: An engaging home page with a responsive layout showcasing the purpose of the site.
+![Landing Page](/static/images/landingpage.png)
+
 - **Story List**: A grid display of travel stories with options to view, edit, or delete (edit and delete for logged-in users, of personal stories).
+![story list page](/static/images/storylist.png)
+
 - **Create a Story**: A form to share travel experiences with a title, location, and rich text content.
+![create a story page](/static/images/createstory.png)
+
 - **My Collection**: A dashboard for logged-in users to manage their drafts and published stories.
+![my collection page](/static/images/mycollection.png)
+
 - **Contact Form**: A simple form for visitors to reach out to the admin team.
+![contact us page](/static/images/contactform.png)
+
 - **Authentication**: Users can register, log in, and log out to access personalized features.
-- **Responsive Design**: Fully responsive for an optimal experience across devices. These include: 
-   1. Navbar 
-   2. Footer 
-   3. Buttons
-   4. Social links 
-   5. User pop up messages
+![sign up page](/static/images/signup.png)
+
+- **Responsive Design**: Fully responsive for an optimal experience across devices. These include:
+
+   1. Navbav - adaptive for different screen sizes, with a toogle button and dropdown menu.
+    ![Navbar dropdown menu](/static/images/tooglenavmenu.png)
+   2. Footer with social links
+   ![footer ](/static/images/footer.png)
+   3. User pop up messages
+   ![pop up message](/static/images/signinmessage.png)
+   4. Buttons 
+   ![buttons](/static/images/signout.png)
+   
 
 ### Colour Scheme and Imagery
 The site uses white and gray coloured text and backgrounds, this is to keep the focus on the background images.
@@ -43,7 +60,9 @@ The images were sourced from <a href="https://www.pexels.com/search/iconic%20won
 - <a href="https://www.pexels.com/photo/stonehenge-under-nimbostratus-clouds-161798/">Stonehenge</a>
 - <a href="https://www.pexels.com/photo/photo-of-high-rise-building-755050/">Empire State Building</a>
 
-
+## Planning 
+During the planning and eary design stages, i use a mind map to help create the foundations of the project. 
+![mind map](/static/images/mindmap.png)
 ## Technologies Used
 - **Languages**: Python, HTML, CSS, JavaScript
 - **Frameworks and Libraries**: Django, Bootstrap
@@ -80,7 +99,7 @@ The database is structured to manage users, stories, and contact form submission
 
 ### Entity-Relationship Diagram
 A detailed ERD maps the relationships between users, stories, and contact forms.
-- Full details of the ERDs <a href="/ERD.md">ERD.md</a>
+- Full details of the [ERDs file](ERD.md)
 
 ### Data Modelling
 - Users: Manage own stories (CRUD).
@@ -99,16 +118,15 @@ A detailed ERD maps the relationships between users, stories, and contact forms.
 
 ### Manual Testing
 Behavior Driven Development was used.
-- Full details here <a href="/BDD.md">BDD.md</a>
+- Full details are here [BDD file](BDD.md)
 
 ### Validator Testing
 - **HTML:** Validated using W3C Validator.
+![html](/static/images/Screenshot154502.png)
 -	**CSS:** Validated using W3C CSS Validator.
+![CSS](/static/images/Screenshot154354.png)
 -	**Python:** Checked for PEP8 compliance.
-
-<img src="/static/images/Screenshot154354.png">
-<img src="/static/images/Screenshot154502.png">
-<img src="/static/images/Screenshot154927.png">
+![python](/static/images/Screenshot154927.png)
 
 ## Bugs 
 ### Resolved
@@ -247,5 +265,3 @@ These future improvements reflect my commitment to enhancing both functionality 
 
 ### Acknowledgements
 - Special thanks to the Code Institute community and my mentor Iuliia Konovalova for support and guidance throughout this project.
-
-<img src="/static/images/mindmap.png">
