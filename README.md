@@ -12,6 +12,8 @@ The Explorer's Post aims to:
 - **Aspiring travellers:** People looking for inspiration for their next journey.
 - **General audience:** Visitors interested in reading engaging travel stories.
 
+![Snap Shot ](/static/images/pp4snapshot.jpg)
+
 ## Features
 ### Design
 The application features a clean and modern interface with intuitive navigation. 
@@ -65,8 +67,18 @@ The images were sourced from [Pexels](https://www.pexels.com/search/iconic%20won
 - [Empire State Building](https://www.pexels.com/photo/photo-of-high-rise-building-755050/)
 
 ## Planning 
-During the planning and early design stages, I use a mind map to help create the foundations of the project. 
+During the planning and early design stages, I use a mind map to help create the foundations of the project. **UPDATE** I also drew out a simple plan on paper and used Balasmiq wireframes.
 ![mind map](/static/images/mindmap.png)
+![First Draft](/static/images/pp4firstdraft.png)
+![Wireframe](/static/images/wireframePP4.png)
+
+Reasoning behind the layout:  
+- Navbar - for quick easy links. 
+- Title - to explain the site to a user, with a fun descriptive paragraph. 
+- Buttons -  for easy links to the main content. 
+- Footer - for easy links and a neat looking site.
+
+
 ## Technologies Used
 - **Languages**: Python, HTML, CSS, JavaScript
 - **Frameworks and Libraries**: Django, Bootstrap
@@ -145,6 +157,7 @@ Behavior Driven Development was used.
 **Solution:** Removed the unused test code.
 4. Navbar drop down menu: I added custom CSS to the bootstrap navbar, this caused the drop down menu to lose its background colour to make it visible. **Solution:** Removed my custom CSS. 
 5. Excrement code line: I had a line of code in my story model that I didn't use. **Solution:** I ran a search to see where and if it was being used. it was only in the model and two migrations. so I removed the code. 
+6. **NEW BUG FOUND AFTER DEPLOYMENT** Within the story detail page, the html tags were displaying within the posts. **Solution:** when fetching the story detail, I added "content|truncatewords:20|safe" to stop the html tags from displaying. 
 
 ## Deployment
 This project was deployed locally first and then hosted on Heroku. Follow these steps to set up and deploy the project: [Deployment file](/DEPLOYMENT.md)
