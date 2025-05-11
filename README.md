@@ -67,7 +67,8 @@ The images were sourced from [Pexels](https://www.pexels.com/search/iconic%20won
 - [Empire State Building](https://www.pexels.com/photo/photo-of-high-rise-building-755050/)
 
 ## Planning 
-During the planning and early design stages, I use a mind map to help create the foundations of the project. **UPDATE** I also drew out a simple plan on paper and used Balasmiq wireframes.
+During the planning and early design stages, I use a mind map to help create the foundations of the project. **UPDATE** 
+I also drew out a simple plan on paper and used Balasmiq wireframes.
 ![mind map](/static/images/mindmap.png)
 ![First Draft](/static/images/pp4firstdraft.png)
 ![Wireframe](/static/images/wireframePP4.png)
